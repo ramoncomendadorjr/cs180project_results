@@ -91,17 +91,17 @@ col1, col2, col3 = st.columns(3)
 with col1:
   # LSTM Train and Validation Loss
   st.write("### LSTM Train and Validation Loss")
-  st.line_chart(make_loss_df(lstm_model_loss), color=["#D760EE", "#01B5E7"])
+  st.line_chart(make_loss_df(lstm_model_loss), color=["#ECB12B", "#EB7347"])
 
 with col2:
   # Conv1d Train and Validation Loss
   st.write("### Conv1d Train and Validation Loss")
-  st.line_chart(make_loss_df(conv1d_model_loss), color=["#D760EE", "#01B5E7"])
+  st.line_chart(make_loss_df(conv1d_model_loss), color=["#ECB12B", "#EB7347"])
 
 with col3:
   # GRU Train and Validation Loss
   st.write("### GRU Train and Validation Loss")
-  st.line_chart(make_loss_df(gru_model_loss), color=["#D760EE", "#01B5E7"])
+  st.line_chart(make_loss_df(gru_model_loss), color=["#ECB12B", "#EB7347"])
 
 st.write("## Actual vs Prediction Graphs")
 
@@ -111,11 +111,11 @@ col4, col5 = st.columns(2)
 with col4:
   # LSTM Train and Test Results
   st.write("### LSTM Train Results")
-  st.line_chart(make_train_df(lstm_train_TRH), color=["#D760EE", "#01B5E7", "#D760EE", "#01B5E7"])
+  st.line_chart(make_train_df(lstm_train_TRH), color=["#ECB12B", "#EB7347", "#ECB12B", "#EB7347"])
 
 with col5:
   st.write("### LSTM Test Results")
-  st.line_chart(make_test_df(lstm_test_TRH), color=["#D760EE", "#01B5E7", "#D760EE", "#01B5E7"])
+  st.line_chart(make_test_df(lstm_test_TRH), color=["#ECB12B", "#EB7347", "#ECB12B", "#EB7347"])
 
 # Allot columns
 col6, col7 = st.columns(2)
@@ -123,11 +123,11 @@ col6, col7 = st.columns(2)
 with col6:
   # Conv1d Train and Test Results
   st.write("### Conv1d Train Results")
-  st.line_chart(make_train_df(conv1d_train_TRH), color=["#D760EE", "#01B5E7", "#D760EE", "#01B5E7"])
+  st.line_chart(make_train_df(conv1d_train_TRH), color=["#ECB12B", "#EB7347", "#ECB12B", "#EB7347"])
 
 with col7:
   st.write("### Conv1d Test Results")
-  st.line_chart(make_test_df(conv1d_test_TRH), color=["#D760EE", "#01B5E7", "#D760EE", "#01B5E7"])
+  st.line_chart(make_test_df(conv1d_test_TRH), color=["#ECB12B", "#EB7347", "#ECB12B", "#EB7347"])
 
 # Allot columns
 col8, col9 = st.columns(2)
@@ -135,11 +135,11 @@ col8, col9 = st.columns(2)
 with col8:
   # GRU Train and Test Results
   st.write("### GRU Train Results")
-  st.line_chart(make_train_df(gru_train_TRH), color=["#D760EE", "#01B5E7", "#D760EE", "#01B5E7"])
+  st.line_chart(make_train_df(gru_train_TRH), color=["#ECB12B", "#EB7347", "#ECB12B", "#EB7347"])
 
 with col9:
   st.write("### GRU Test Results")
-  st.line_chart(make_test_df(gru_test_TRH), color=["#D760EE", "#01B5E7", "#D760EE", "#01B5E7"])
+  st.line_chart(make_test_df(gru_test_TRH), color=["#ECB12B", "#EB7347", "#ECB12B", "#EB7347"])
 
 st.write("## Residual Plots")
 
@@ -149,10 +149,10 @@ col10, col11 = st.columns(2)
 with col10:
   # Temperature Residual Plots
   st.write("### Temperature Residual Plot")
-  st.scatter_chart(make_residual_plot_df(lstm_test_TRH, conv1d_test_TRH, gru_test_TRH), x='Temperature Test Predictions', y=['LSTM Residuals', 'Conv1d Residuals', 'GRU Residuals'], color=["#D760EE", "#01B5E7", "#7049E0"])
+  st.scatter_chart(make_residual_plot_df(lstm_test_TRH, conv1d_test_TRH, gru_test_TRH), x='Temperature Test Predictions', y=['LSTM Residuals', 'Conv1d Residuals', 'GRU Residuals'], color=["#ECB12B", "#EB7347", "#F3DFAE"])
 
 with col11:
   # Relative Humidity Residual Plots
   st.write("### Relative Humidity Residual Plot")
-  st.scatter_chart(make_residual_plot_df2(lstm_test_TRH, conv1d_test_TRH, gru_test_TRH), x='Relative Humidity Test Predictions', y=['LSTM Residuals', 'Conv1d Residuals', 'GRU Residuals'], color=["#D760EE", "#01B5E7", "#7049E0"])
+  st.scatter_chart(make_residual_plot_df2(lstm_test_TRH, conv1d_test_TRH, gru_test_TRH), x='Relative Humidity Test Predictions', y=['LSTM Residuals', 'Conv1d Residuals', 'GRU Residuals'], color=["#ECB12B", "#EB7347", "#F3DFAE"])
 
